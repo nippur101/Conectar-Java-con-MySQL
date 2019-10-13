@@ -1,0 +1,48 @@
+package pruebarol;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Nippur
+ */
+public class Conexion {
+    private Connection link;
+    private  String servidor="jdbc:mysql://localhost:3306/pruebarol";
+    private  String user="root";
+    private  String pass="1165";
+
+
+    public Conexion() throws SQLException {
+        link = null;
+
+       try{
+           Class.forName("org.gjt.mm.mysql.Driver");
+           link = DriverManager.getConnection(this.servidor, this.user, this.pass);
+       }catch(Exception ex){
+
+           JOptionPane.showMessageDialog(null, "SIN CONEXION "+ex);
+           System.out.println(ex);
+       }
+    }
+    public Connection getConexion(){
+
+        JOptionPane.showMessageDialog(null, "Conectado");
+        return link;
+
+    }
+
+
+    public void desconectar(){
+        link=null;
+        if(link==null){
+            JOptionPane.showMessageDialog(null, "Conexion terminada");
+
+        }
+}
+       
+}
