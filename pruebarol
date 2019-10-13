@@ -1,0 +1,30 @@
+package pruebarol;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+/**
+ *
+ * @author Nippur
+ */
+public class PruebaRol {
+
+    public static void main(String[] args) throws SQLException {
+       Conexion mysql = new Conexion();
+
+       Statement s =mysql.getConexion().createStatement(); // mysql.getConexion()=link en clase conexion
+           ResultSet rs = s.executeQuery ("select * from monstruos");
+           while (rs.next())
+        {
+            System.out.println (
+               rs.getInt (1) + "   " +rs.getInt (2) +"   "+rs.getInt (3) +"   "+
+               rs.getString (4)+ "    " +
+               rs.getInt (5) );
+        }
+    rs.close();
+
+
+    }
+
+}
