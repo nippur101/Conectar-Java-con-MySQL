@@ -1,7 +1,7 @@
 # Conectar-Java-con-MySQL
 Metodo para crear una conexion entre java y MySQL y como leer una tabla desde la base de datos
--En Library debe esta instalado MySQL JDBC Drivers-mysql-connectors....
+-En Library debe esta instalado MySQL JDBC Drivers-mysql-connectors....\n
 -en Class.forName("org.gjt.mm.mysql.Driver"); debe estar la direccion correcta de los drivers de acuerdo a la version
 -en servidor="jdbc:mysql://localhost:3306/pruebarol"; habitualmente es localhost:3306/ (NOMBRE DE LA BASE DE DATOS)
-- en ResultSet rs = s.executeQuery ("select * from (NOMBRE DE LA TABLA)");
+-en ResultSet rs = s.executeQuery ("select * from (NOMBRE DE LA TABLA)");
 
