@@ -13,8 +13,11 @@ Metodo para crear una conexion entre java y MySQL y como leer una tabla desde la
 
 
 ERRORES AL INTENTAR CONECTAR
+
 ERROR
+
 -java.math.BigInteger cannot be cast to java.lang.long?
+
 SOLUCION
 
 -primero se elimina archivo mysql-connector-java de la ruta C:\Program Files\NetBeans 8.2\ide\modules\ext 
